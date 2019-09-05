@@ -1,0 +1,58 @@
+get:
+  operationId: listItems
+  tags:
+    - items
+  summary: Lists the items
+  description:
+    Allows for specifying a number of filter parameters to
+    narrow down the results.
+    Also allows for specifying a **sinceId** and **pageSize** parameter
+    to page through large result sets.
+  parameters:
+    - name: sinceId
+      in: query
+      description: The last id that was seen.
+      type: integer
+      format: int64
+      required: false
+
+    - name: tags
+      description: the tags to filter by
+      in: query
+      type: array
+      uniqueItems: true
+      items:
+        type: string
+
+    - name: status
+      description: the status to filter by
+      in: query
+      type: array
+      uniqueItems: true
+      collectionFormat: pipes
+      items:
+        type: string
+        enum: ['available', 'unavailable', 'sold']
+
+    - $ref: '#/parameters/PageSize'
+  responses:
+    default:
+      $ref: '#/responses/ErrorResponse'
+    200:
+      description: Successful response
+      headers:
+        # This is probably not the right place to put this kind of information in
+        # a public API, but I need a header in a response.
+        X-Last-Task-Id:
+          type: integer
+          format: int64
+          description: the last task id known to the application
+      schema:
+        title: TaskList
+        type: array
+        items:
+          $ref: '#/definitions/ItemList'
+    422:
+      description: Validation error
+      schema:
+        $ref: '#/definitions/ValidationError'

@@ -1,0 +1,47 @@
+title: a list for a item
+description:
+  A item list is a minimalistic representation of a item. Useful for display in list views, like a item list.
+type: object
+required:
+  - title
+  - status
+properties:
+  id:
+    title: The id of the item.
+    description: A unique identifier for the item. These are created in ascending order.
+    type: integer
+    format: int64
+    readOnly: true
+  title:
+    title: The title of the item.
+    description:
+      The title for a item, this needs to be at least 5 chars long.
+      Titles don't allow any formatting, besides emoji.
+    type: string
+    minLength: 5
+    maxLength: 150
+  description:
+    title: The description of the item.
+    description:
+      The item description is a longer, more detailed description of the issue.
+      Perhaps it even mentions steps to reproduce.
+    type: string
+  status:
+    title: the status of the item
+    description:
+      There are 3 possible values for a status.
+      Unavailable means the seller cancel the sale.
+    type: string
+    enum: ['available', 'unavailable', 'sold']
+  assignedTo:
+    $ref: '#/definitions/Seller'
+  tags:
+    title: item tags.
+    description: a item can be tagged with text blurbs.
+    type: array
+    uniqueItems: true
+    maxItems: 5
+    items:
+      pattern: \w[\w- ]+
+      minLength: 3
+      type: string

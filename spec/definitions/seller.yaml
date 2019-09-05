@@ -1,0 +1,23 @@
+title: A minimal representation of a user.
+description:
+  This representation of a user is mainly meant for inclusion in other models, or for list views.
+type: object
+required:
+  - id
+  - screenName
+properties:
+  id:
+    title: A unique identifier for a user.
+    description:
+      This id is automatically generated on the server when a user is created.
+    type: integer
+    format: int64
+    readOnly: true
+  screenName:
+    title: The screen name for the user.
+    description:
+      This is used for vanity type urls as well as login credentials.
+    type: string
+    pattern: \w[\w_-]+
+    minLength: 3
+    maxLength: 255

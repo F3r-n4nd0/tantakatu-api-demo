@@ -1,0 +1,23 @@
+swagger: '2.0'
+info:
+  title: 'tantakatu-api'
+  version: '1.0.0'
+produces:
+  - application/json
+consumes:
+  - application/json
+schemes:
+  - http
+securityDefinitions:
+  APIKeyHeader:
+    type: apiKey
+    in: header
+    name: X-API-Key
+definitions:
+  $ref: ./spec/definitions/index.yaml
+paths:
+  $ref: ./spec/paths/index.yaml
+parameters:
+  $ref: ./spec/parameters/index.yaml
+responses:
+  $ref: ./spec/responses/index.yaml

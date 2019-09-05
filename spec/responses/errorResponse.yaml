@@ -1,0 +1,6 @@
+description: Error response
+headers:
+  X-Error-Code:
+    type: string
+schema:
+  $ref: '#/definitions/Error'

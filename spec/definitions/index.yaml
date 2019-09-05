@@ -1,0 +1,10 @@
+Item:
+  $ref: './item.yaml'
+ValidationError:
+  $ref: './validationError.yaml'
+ItemList:
+  $ref: './itemList.yaml'
+Seller:
+  $ref: './seller.yaml'
+Error:
+  $ref: './error.yaml'

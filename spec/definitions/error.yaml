@@ -1,0 +1,20 @@
+title: Error Structure
+description: |
+  Contains all the properties any error response from the API will contain.
+  Some properties are optional so might be empty most of the time
+type: object
+required:
+  - code
+  - message
+properties:
+  code:
+    description: the error code, this is not necessarily the http status code
+    type: integer
+    format: int32
+  message:
+    description: a human readable version of the error
+    type: string
+  helpUrl:
+    description: an optional url for getting more help about this error
+    type: string
+    format: uri

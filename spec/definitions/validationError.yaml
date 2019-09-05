@@ -1,0 +1,7 @@
+allOf:
+  - $ref: '#/definitions/Error'
+  - type: object
+    properties:
+      field:
+        description: an optional field name to which this validation error applies
+        type: string

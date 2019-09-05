@@ -1,0 +1,2 @@
+/items:
+  $ref: './items/index.yaml'

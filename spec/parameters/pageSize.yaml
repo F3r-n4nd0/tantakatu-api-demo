@@ -1,0 +1,6 @@
+name: pageSize
+type: integer
+format: int32
+in: query
+description: Amount of items to return in a single page
+default: 20

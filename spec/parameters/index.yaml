@@ -1,0 +1,2 @@
+PageSize:
+  $ref: './pageSize.yaml'
