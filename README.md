@@ -15,18 +15,13 @@ This is a JSON over HTTP service for a flea-market-like called Tantakatu.
 
 * An API Key set as header X-API-KEY 
 
-## API Documentation
-
-Browse to [http://petstore.swagger.io/](http://petstore.swagger.io/) (or pull and run the [Swagger UI](https://swagger.io/swagger-ui/) locally if you prefer) then enter [https://sendmailserviceproxy.keyshift.co/swagger.json](https://sendmailserviceproxy.keyshift.co/swagger.json) and click explore to see the interactive documentation
- 
-
 ## Build Instructions
 
 * Create a new go workspace and clone repo
 * Install recent version of NodeJs if not already present
 * Install multi-file-swagger [Multi-file Swagger](https://github.com/mohsen1/multi-file-swagger-example)
 * Install go-swagger [Go Swagger](https://github.com/go-swagger/go-swagger)
-* Run [scripts/swagger_code_gen.sh](swagger_code_gen.sh) to generate the server skeleton and [client](client) package.
+* Run [scripts/swagger_code_gen.sh](scripts/swagger_code_gen.sh) to generate the server skeleton and [client](client) package.
 * Set the following environment variables
     * LOG_OUTPUT_FORMAT - JSON_ONLINE | JSON_PRETTY | DEBUG (optional - default DEBUG)
     * LOG_OUTPUT_DEBUG - true/false (optional - default false)
