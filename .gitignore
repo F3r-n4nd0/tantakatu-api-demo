@@ -48,4 +48,6 @@ cmd/tantakatu-server
 vendor
 
 main
-sendmailserviceproxy_server
+tantakatu-api
+Dockerfile
+tantakatu-api-bundle.zip
