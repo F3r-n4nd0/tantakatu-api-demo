@@ -12,7 +12,6 @@ import (
 	"github.com/rs/cors"
 )
 
-
 // This file is safe to edit. Once it exists it will not be overwritten
 
 //go:generate swagger generate server --target .. --name taskpilot_api --spec ../swagger.json
@@ -27,7 +26,7 @@ func configureAPI(api *operations.TantakatuAPI) http.Handler {
 	// configure the api here
 	api.ServeError = errors.ServeError
 
-	apiKey = os.Getenv("SMSP_API_KEY")
+	apiKey = os.Getenv("API_KEY")
 	// Set your custom logger if needed. Default one is log.Printf
 	// Expected interface func(string, ...interface{})
 	//
@@ -81,7 +80,7 @@ func authenticate(h http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 
 		//This is only for demo purpose
-		if  r.URL.Path != "/swagger.json" && r.Header.Get("X-API-KEY") != apiKey {
+		if r.URL.Path != "/swagger.json" && r.Header.Get("X-API-KEY") != apiKey {
 			logging.LogInfo(logging.Unauthorised, r, "X-API-KEY : "+r.Header.Get("X-API-KEY"))
 			http.Error(w, "Unauthorised", 401)
 			return
