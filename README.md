@@ -15,6 +15,20 @@ This is a JSON over HTTP service for a flea-market-like called Tantakatu.
 
 * An API Key set as header X-API-KEY 
 
+## API Documentation
+
+Browse to [Go-Swagger Serve](http://tantakatuapi-env.33g5bq4rrd.us-east-1.elasticbeanstalk.com:8080/docs) 
+
+Demo implementation [Demo API](http://tantakatuapi-env.33g5bq4rrd.us-east-1.elasticbeanstalk.com)
+Demo X-API-KEY = 123456
+
+### Postman 
+
+How to import to postman [Postman configuration](https://learning.getpostman.com/docs/postman/collections/working_with_openAPI/)
+
+Swagger configuration file  [swagger,yaml](http://tantakatuapi-env.33g5bq4rrd.us-east-1.elasticbeanstalk.com/swagger.yaml)
+
+ 
 ## Build Instructions
 
 * Create a new go workspace and clone repo
