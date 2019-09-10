@@ -26,7 +26,7 @@ Demo X-API-KEY = 123456
 
 How to import to postman [Postman configuration](https://learning.getpostman.com/docs/postman/collections/working_with_openAPI/)
 
-Swagger configuration file  [swagger,yaml](http://tantakatuapi-env.33g5bq4rrd.us-east-1.elasticbeanstalk.com/swagger.yaml)
+Swagger configuration file  [swagger,yaml](http://tantakatuapi-env.33g5bq4rrd.us-east-1.elasticbeanstalk.com/swagger.json)
 
  
 ## Build Instructions

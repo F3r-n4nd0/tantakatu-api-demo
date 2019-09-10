@@ -80,7 +80,7 @@ func authenticate(h http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 
 		//This is only for demo purpose
-		if r.URL.Path != "/swagger.yaml" && r.Header.Get("X-API-KEY") != apiKey {
+		if r.URL.Path != "/swagger.json" && r.Header.Get("X-API-KEY") != apiKey {
 			logging.LogInfo(logging.Unauthorised, r, "X-API-KEY : "+r.Header.Get("X-API-KEY"))
 			http.Error(w, "Unauthorised", 401)
 			return
