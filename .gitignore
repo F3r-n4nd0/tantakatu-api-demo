@@ -42,7 +42,6 @@ files/*
 # auto generated files
 restapi
 models
-swagger.yaml
 cmd/tantakatu-server
 
 vendor
