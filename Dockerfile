@@ -19,4 +19,6 @@ RUN sh ./scripts/swagger_code_gen.sh
 RUN go get ./... && go build -o tantakatu-api cmd/tantakatu-server/main.go
 
 
+EXPOSE 9090 9191
+
 CMD sh ./scripts/run_services.sh
